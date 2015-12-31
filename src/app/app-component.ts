@@ -1,4 +1,5 @@
-import {Component, CORE_DIRECTIVES} from 'angular2/angular2';
+import {CORE_DIRECTIVES} from 'angular2/common';
+import {Component} from 'angular2/core';
 import {GreetingComponent} from './greeting-component';
 import {BorderComponent} from './border-component';
 

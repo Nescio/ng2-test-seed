@@ -1,4 +1,5 @@
-import {Component, FORM_DIRECTIVES} from 'angular2/angular2';
+import {FORM_DIRECTIVES} from 'angular2/common';
+import {Component} from 'angular2/core';
 import {UserService} from './user-service';
 
 @Component({
