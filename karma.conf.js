@@ -7,11 +7,13 @@ module.exports = function(config) {
 
     files: [
       // paths loaded by Karma
-      {pattern: 'node_modules/systemjs/dist/system.src.js', included: true, watched: true},
-      {pattern: 'node_modules/angular2/bundles/angular2.js', included: true, watched: true},
+      'node_modules/es6-module-loader/dist/es6-module-loader.js',
+      'node_modules/es6-shim/es6-shim.js',
+      'node_modules/angular2/bundles/angular2-polyfills.js',
+      'node_modules/systemjs/dist/system.src.js',
+      'node_modules/rxjs/bundles/Rx.js',
+      'node_modules/angular2/bundles/angular2.js',
       {pattern: 'node_modules/angular2/bundles/testing.dev.js', included: true, watched: true},
-      {pattern: 'node_modules/rxjs/bundles/Rx.js', included: true, watched: true},
-      {pattern: 'node_modules/reflect-metadata/reflect.js', included: true, watched: true},
       {pattern: 'karma-test-shim.js', included: true, watched: true},
       {pattern: 'src/test/matchers.js', included: true, watched: true},
 
