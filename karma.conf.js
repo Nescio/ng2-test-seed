@@ -1,6 +1,5 @@
 module.exports = function(config) {
     config.set({
-        basePath: '',
         frameworks: ['jasmine'],
         files: [
             'node_modules/es6-module-loader/dist/es6-module-loader.js',
@@ -21,12 +20,6 @@ module.exports = function(config) {
         proxies: {
             "/app/": "/base/src/app/"
         },
-        reporters: ['progress'],
-        port: 9876,
-        colors: true,
-        logLevel: config.LOG_INFO,
-        autoWatch: true,
-        browsers: ['Chrome'],
-        singleRun: false
+        browsers: ['Chrome']
     });
 }
