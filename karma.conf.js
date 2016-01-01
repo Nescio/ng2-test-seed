@@ -13,8 +13,8 @@ module.exports = function(config) {
       'node_modules/systemjs/dist/system.src.js',
       'node_modules/rxjs/bundles/Rx.js',
       'node_modules/angular2/bundles/angular2.js',
-      {pattern: 'node_modules/angular2/bundles/testing.dev.js', included: true, watched: true},
-      {pattern: 'karma-test-shim.js', included: true, watched: true},
+      'node_modules/angular2/bundles/testing.dev.js',
+      'karma-test-shim.js',
       {pattern: 'src/test/matchers.js', included: true, watched: true},
 
       // paths loaded via module imports
