@@ -3,8 +3,7 @@ import {
   describe,
   expect,
   injectAsync,
-  TestComponentBuilder,
-  beforeEachProviders
+  TestComponentBuilder
 } from 'angular2/testing';
 import { Component } from 'angular2/core';
 import { BorderComponent } from '../app/border-component';
