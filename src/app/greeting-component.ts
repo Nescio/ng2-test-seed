@@ -5,9 +5,11 @@ import {UserService} from './user-service';
 @Component({
   selector: 'my-greeting',
   template: `
-    <input [(value)]="user.pin" placeholder="1111" type=number />
-    <button (click)="enter()">Enter</button>
-    <h3>Status: {{greeting}}</h3>
+    <form #f="ngForm" (ngSubmit)="enter(f.value)">
+      <input ngControl="pin" placeholder="1111" type=number />
+      <button type="submit" >Enter</button>
+      <h3>Status: {{greeting}}</h3>
+    </form>
   `,
   styles :[`
     input {font-family: monospace; font-size: 2em; width: 4em}
@@ -18,11 +20,12 @@ import {UserService} from './user-service';
 export class GreetingComponent {
   greeting: string = 'Enter PIN';
   pending: Promise<any>;
-
+  
   constructor(public user: UserService) {
   }
 
-  enter() {
+  enter(values) {
+    this.user.pin = values["pin"];
     this.greeting = 'Processing...';
     this.pending = this.user.getGreeting().then((greeting) => {
       this.greeting = greeting;
